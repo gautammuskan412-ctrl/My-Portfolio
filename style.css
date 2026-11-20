@@ -1,0 +1,277 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #05070d;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background-color: #080b12;
+    border-bottom: 1px solid #252535;
+    position: sticky;
+    top: 0;
+}
+
+nav h2 {
+    color: white;
+}
+
+nav h2 span {
+    color: #00c6ff;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #c5c5d0;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.menu a:hover {
+    color: #00c6ff;
+}
+
+nav button {
+    background: #151b29;
+    color: white;
+    border: 1px solid #333;
+    padding: 9px 13px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Home */
+
+#home {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #05070d;
+
+    background-image:
+    radial-gradient(#00c6ff 1px, transparent 1px),
+    radial-gradient(#7545ff 1px, transparent 1px);
+
+    background-size: 100px 100px, 150px 150px;
+    background-position: 0 0, 50px 50px;
+}
+
+.intro {
+    max-width: 700px;
+    padding: 25px;
+}
+
+.tag {
+    display: inline-block;
+    color: #00d9c0;
+    background: #102027;
+    padding: 9px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.intro h1 {
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.intro h1 span {
+    background: linear-gradient(to right, #267cff, #b13cff);
+    color: transparent;
+    background-clip: text;
+}
+
+.intro h3 {
+    color: #c5c5d0;
+    margin-bottom: 20px;
+}
+
+.description {
+    color: #9299aa;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.small-text {
+    color: #9da8bd;
+    font-size: 13px;
+    margin-bottom: 28px;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.buttons a {
+    padding: 12px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.first-btn {
+    background: linear-gradient(to right, #176dff, #a52cff);
+    color: white;
+}
+
+.second-btn {
+    color: white;
+    border: 1px solid #444;
+}
+
+.buttons a:hover {
+    transform: translateY(-3px);
+}
+
+/* Other Sections */
+
+section:not(#home) {
+    padding: 75px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+section h2 span {
+    color: #8c50ff;
+}
+
+section p {
+    color: #b3b3c2;
+    line-height: 1.8;
+}
+
+/* Cards */
+
+.card {
+    background-color: #101522;
+    border: 1px solid #292e42;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.card h3 {
+    color: #9c69ff;
+    margin-bottom: 15px;
+}
+
+/* Contact Form */
+
+form {
+    max-width: 450px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 14px;
+    background: #101522;
+    border: 1px solid #35384b;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+}
+
+textarea {
+    height: 120px;
+}
+
+form button {
+    padding: 13px;
+    background: linear-gradient(to right, #176dff, #a52cff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 22px;
+    background: #080b12;
+    color: #9299aa;
+}
+
+/* Light Mode */
+
+.light-mode {
+    background-color: #f2f3fa;
+    color: #222;
+}
+
+.light-mode nav,
+.light-mode footer {
+    background-color: #e2e5f1;
+}
+
+.light-mode #home {
+    background-color: #f2f3fa;
+}
+
+.light-mode .card {
+    background-color: white;
+}
+
+.light-mode section p {
+    color: #444;
+}
+
+/* Mobile View */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 13px;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+    }
+
+    section:not(#home) {
+        padding: 50px 6%;
+    }
+
+}
